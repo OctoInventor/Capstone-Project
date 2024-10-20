@@ -1,10 +1,10 @@
 import { useState } from 'react';
 import { useEffect } from "react"; 
 import Forecast from "./components/Forecast";
-import Inputs from "./components/Inputs";
+import Inputs from "./components/Inputs.jsx";
 import TempAndDetails from "./components/TempAndDetails";
 import TimeAndLocation from "./components/TimeAndLocation";
-import { TopBottons } from "./components/TopBottons";
+import { TopBottons } from "./components/TopButtons";
 import getFormattedWeatherData from "./services/WeatherService";
 
 import { ToastContainer, toast } from 'react-toastify';
