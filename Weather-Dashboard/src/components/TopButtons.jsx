@@ -1,6 +1,6 @@
 import React from 'react'
 
-export const TopBottons = ({ setQuery }) => {
+export const TopButtons = ({ setQuery }) => {
 
     const cities = [
         {

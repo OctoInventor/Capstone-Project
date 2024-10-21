@@ -1,10 +1,10 @@
 import { useState } from 'react';
 import { useEffect } from "react"; 
 import Forecast from "./components/Forecast";
-import Inputs from "./components/Inputs.jsx";
+import Inputs from "./components/Inputs";
 import TempAndDetails from "./components/TempAndDetails";
 import TimeAndLocation from "./components/TimeAndLocation";
-import { TopBottons } from "./components/TopButtons";
+import { TopButtons } from "./components/TopButtons";
 import getFormattedWeatherData from "./services/WeatherService";
 
 import { ToastContainer, toast } from 'react-toastify';
@@ -27,7 +27,7 @@ const App = () => {
 
 
     await getFormattedWeatherData ({ ...query, units }).then( (data) => {
-      toast.success(`Fetched weather daa for ${data.name}, ${data.country}`);
+      toast.success(`Fetched weather data for ${data.name}, ${data.country}`);
       setWeather(data)
     });
     console.log();
@@ -49,7 +49,7 @@ const formatBackground = () => {
     className={`mx-auto max-w-screen-lg mt-4 py-5 px-32 bg-gradient-to-br
     shadow-xl from-gray-400 ${formatBackground()}`}
      >
-    <TopBottons setQuery={setQuery} />
+    <TopButtons setQuery={setQuery} />
     <Inputs setQuery={setQuery} setUnits={setUnits} />
 
     {weather && (
